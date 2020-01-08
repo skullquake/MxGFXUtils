@@ -17,12 +17,14 @@ public class ja_bufferedimage_crt extends CustomJavaAction<IMendixObject>
 {
 	private java.lang.Long w;
 	private java.lang.Long h;
+	private gfxutils.proxies.enum_imgtype pixfmt;
 
-	public ja_bufferedimage_crt(IContext context, java.lang.Long w, java.lang.Long h)
+	public ja_bufferedimage_crt(IContext context, java.lang.Long w, java.lang.Long h, java.lang.String pixfmt)
 	{
 		super(context);
 		this.w = w;
 		this.h = h;
+		this.pixfmt = pixfmt == null ? null : gfxutils.proxies.enum_imgtype.valueOf(pixfmt);
 	}
 
 	@java.lang.Override
@@ -32,7 +34,19 @@ public class ja_bufferedimage_crt extends CustomJavaAction<IMendixObject>
 		com.mendix.systemwideinterfaces.core.IMendixObject ret=null;
 		try{
 			gfxutils.support.BufferedImageStorage bufferedImageStorage=gfxutils.support.BufferedImageStorage.getInstance();
-			java.lang.String _Id=bufferedImageStorage.createBufferedImage(w.intValue(),h.intValue());
+			java.lang.String _Id=null;
+			switch(pixfmt.getCaption()){
+				case "rgb":
+					bufferedImageStorage.createBufferedImage(w.intValue(),h.intValue(),java.awt.image.BufferedImage.TYPE_INT_RGB);
+					break;
+				case "rgba":
+					bufferedImageStorage.createBufferedImage(w.intValue(),h.intValue(),java.awt.image.BufferedImage.TYPE_INT_ARGB);
+					break;
+				default:
+					com.mendix.core.Core.getLogger(this.toString()).error("Invalid pixel format");
+					return ret;
+			}
+
 			ret=com.mendix.core.Core.instantiate(
 				this.getContext(),
 				"GFXUtils.BufferedImage"

@@ -18,11 +18,14 @@ public class BufferedImageStorage{
 	public static java.awt.image.BufferedImage getBufferedImage(java.lang.String k){
 		return BufferedImageStorage.hmbi.get(k);
 	}
-	public static java.lang.String createBufferedImage(int width,int height){
+	//public static java.lang.String createBufferedImage(int width,int height,java.awt.image.BufferedImage imgtype){
+	public static java.lang.String createBufferedImage(int width,int height,int imgtype){
 		java.awt.image.BufferedImage bi=new java.awt.image.BufferedImage(
 			width,
 			height,
-			java.awt.image.BufferedImage.TYPE_INT_RGB
+			//java.awt.image.BufferedImage.TYPE_INT_RGB
+			//java.awt.image.BufferedImage.TYPE_INT_ARGB
+			imgtype
 		);            
 		java.lang.String sid=new java.lang.String("bi_"+BufferedImageStorage.hmbi.size());
 		BufferedImageStorage.hmbi.put(

@@ -57,6 +57,7 @@ public class ja_bufferedimage_line extends CustomJavaAction<java.lang.Boolean>
 					)
 				;
 			int col=(r.intValue()<<16)|(g.intValue()<<8)|b.intValue();
+			//int col=(a.intValue()<<24)|(r.intValue()<<16)|(g.intValue()<<8)|b.intValue();
 			int d=0;
 			int dx=Math.abs(x1.intValue()-x0.intValue());
 			int dy=Math.abs(y1.intValue()-y0.intValue());

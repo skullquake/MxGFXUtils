@@ -16,7 +16,8 @@ public class UserActionsRegistrar
     registrator.registerUserAction(gfxutils.actions.ja_bufferedimage_hline.class);
     registrator.registerUserAction(gfxutils.actions.ja_bufferedimage_line.class);
     registrator.registerUserAction(gfxutils.actions.ja_bufferedimage_lst.class);
-    registrator.registerUserAction(gfxutils.actions.ja_bufferedimage_putpixel.class);
+    registrator.registerUserAction(gfxutils.actions.ja_bufferedimage_putpixel_rgb.class);
+    registrator.registerUserAction(gfxutils.actions.ja_bufferedimage_putpixel_rgba.class);
     registrator.registerUserAction(gfxutils.actions.ja_bufferedimage_rm.class);
     registrator.registerUserAction(gfxutils.actions.ja_bufferedimage_vline.class);
     registrator.registerUserAction(gfxutils.actions.ja_cos.class);
