@@ -1,9 +1,0 @@
-Buildfile: C:\Users\ockert\dev\mdx\proj\MxGFXUtils\src\deployment\build_core.xml
-
-deploy:
-     [copy] Copying 46 files to C:\Users\ockert\dev\mdx\proj\MxGFXUtils\src\deployment
-
-BUILD SUCCESSFUL
-Total time: 2 seconds
-
-
