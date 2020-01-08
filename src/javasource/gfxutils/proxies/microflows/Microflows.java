@@ -385,6 +385,19 @@ public class Microflows
 			throw new MendixRuntimeException(e);
 		}
 	}
+	public static void ivk_bufferedimage_putpixel_test_9_opt(IContext context, gfxutils.proxies.BufferedImage _obj_bufferedimage)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("obj_bufferedimage", _obj_bufferedimage == null ? null : _obj_bufferedimage.getMendixObject());
+			Core.execute(context, "GFXUtils.ivk_bufferedimage_putpixel_test_9_opt", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
 	public static void ivk_bufferedimage_rm(IContext context, gfxutils.proxies.BufferedImage _obj_bufferedimage)
 	{
 		try
