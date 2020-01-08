@@ -48,6 +48,78 @@ public class Microflows
 			throw new MendixRuntimeException(e);
 		}
 	}
+	public static java.lang.Double ds_perlin_fade(IContext context, java.lang.Double _t)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("t", _t);
+			return (java.lang.Double)Core.execute(context, "GFXUtils.ds_perlin_fade", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static java.lang.Double ds_perlin_grad(IContext context, java.lang.Long _hash, java.lang.Double _x, java.lang.Double _y, java.lang.Double _z)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("hash", _hash);
+			params.put("x", _x);
+			params.put("y", _y);
+			params.put("z", _z);
+			return (java.lang.Double)Core.execute(context, "GFXUtils.ds_perlin_grad", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static java.lang.Double ds_perlin_lerp(IContext context, java.lang.Double _t, java.lang.Double _a, java.lang.Double _b)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("t", _t);
+			params.put("a", _a);
+			params.put("b", _b);
+			return (java.lang.Double)Core.execute(context, "GFXUtils.ds_perlin_lerp", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static java.lang.Long ds_perlin_lut(IContext context, java.lang.Long _i)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("i", _i);
+			return (java.lang.Long)Core.execute(context, "GFXUtils.ds_perlin_lut", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static java.lang.Double ds_perlin_noise(IContext context, java.lang.Double __x, java.lang.Double __y, java.lang.Double __z)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("_x", __x);
+			params.put("_y", __y);
+			params.put("_z", __z);
+			return (java.lang.Double)Core.execute(context, "GFXUtils.ds_perlin_noise", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
 	public static void hsv2rgb(IContext context, gfxutils.proxies.Rgb _obj_rgb, gfxutils.proxies.Hsv _obj_hsv)
 	{
 		try
@@ -178,6 +250,23 @@ public class Microflows
 			params.put("b", _b);
 			params.put("a", _a);
 			Core.execute(context, "GFXUtils.ivk_bufferedimage_fill_opt", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static void ivk_bufferedimage_fill_opt_alpha(IContext context, gfxutils.proxies.BufferedImage _obj_bufferedimage, java.lang.Long _r, java.lang.Long _g, java.lang.Long _b, java.lang.Long _a)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("obj_bufferedimage", _obj_bufferedimage == null ? null : _obj_bufferedimage.getMendixObject());
+			params.put("r", _r);
+			params.put("g", _g);
+			params.put("b", _b);
+			params.put("a", _a);
+			Core.execute(context, "GFXUtils.ivk_bufferedimage_fill_opt_alpha", params);
 		}
 		catch (CoreException e)
 		{
@@ -321,6 +410,23 @@ public class Microflows
 			throw new MendixRuntimeException(e);
 		}
 	}
+	public static void ivk_bufferedimage_perlin(IContext context, gfxutils.proxies.BufferedImage _obj_bufferedimage, java.lang.Long _r, java.lang.Long _g, java.lang.Long _b, java.lang.Long _a)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("obj_bufferedimage", _obj_bufferedimage == null ? null : _obj_bufferedimage.getMendixObject());
+			params.put("r", _r);
+			params.put("g", _g);
+			params.put("b", _b);
+			params.put("a", _a);
+			Core.execute(context, "GFXUtils.ivk_bufferedimage_perlin", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
 	public static void ivk_bufferedimage_putpixel_opt(IContext context, java.lang.Long _r, java.lang.Long _g, java.lang.Long _b, java.lang.Long _x, java.lang.Long _y, gfxutils.proxies.BufferedImage _obj_bufferedimage, java.lang.Long _a)
 	{
 		try
@@ -360,6 +466,19 @@ public class Microflows
 			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
 			params.put("obj_bufferedimage", _obj_bufferedimage == null ? null : _obj_bufferedimage.getMendixObject());
 			Core.execute(context, "GFXUtils.ivk_bufferedimage_putpixel_test_10", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static void ivk_bufferedimage_putpixel_test_11(IContext context, gfxutils.proxies.BufferedImage _obj_bufferedimage)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("obj_bufferedimage", _obj_bufferedimage == null ? null : _obj_bufferedimage.getMendixObject());
+			Core.execute(context, "GFXUtils.ivk_bufferedimage_putpixel_test_11", params);
 		}
 		catch (CoreException e)
 		{
@@ -451,6 +570,19 @@ public class Microflows
 			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
 			params.put("obj_bufferedimage", _obj_bufferedimage == null ? null : _obj_bufferedimage.getMendixObject());
 			Core.execute(context, "GFXUtils.ivk_bufferedimage_putpixel_test_6", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static void ivk_bufferedimage_putpixel_test_6_opt(IContext context, gfxutils.proxies.BufferedImage _obj_bufferedimage)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("obj_bufferedimage", _obj_bufferedimage == null ? null : _obj_bufferedimage.getMendixObject());
+			Core.execute(context, "GFXUtils.ivk_bufferedimage_putpixel_test_6_opt", params);
 		}
 		catch (CoreException e)
 		{
@@ -555,6 +687,23 @@ public class Microflows
 			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
 			params.put("obj_bufferedimage", _obj_bufferedimage == null ? null : _obj_bufferedimage.getMendixObject());
 			Core.execute(context, "GFXUtils.ivk_bufferedimage_rm", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static void ivk_bufferedimage_simplex(IContext context, gfxutils.proxies.BufferedImage _obj_bufferedimage, java.lang.Long _r, java.lang.Long _g, java.lang.Long _b, java.lang.Long _a)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("obj_bufferedimage", _obj_bufferedimage == null ? null : _obj_bufferedimage.getMendixObject());
+			params.put("r", _r);
+			params.put("g", _g);
+			params.put("b", _b);
+			params.put("a", _a);
+			Core.execute(context, "GFXUtils.ivk_bufferedimage_simplex", params);
 		}
 		catch (CoreException e)
 		{

@@ -8,10 +8,13 @@ public class UserActionsRegistrar
   {
     registrator.bundleComponentLoaded();
     registrator.registerUserAction(gfxutils.actions.ja_acos.class);
+    registrator.registerUserAction(gfxutils.actions.ja_and.class);
     registrator.registerUserAction(gfxutils.actions.ja_asin.class);
     registrator.registerUserAction(gfxutils.actions.ja_atan.class);
     registrator.registerUserAction(gfxutils.actions.ja_bufferedimage_circle.class);
     registrator.registerUserAction(gfxutils.actions.ja_bufferedimage_crt.class);
+    registrator.registerUserAction(gfxutils.actions.ja_bufferedimage_fill_rgb.class);
+    registrator.registerUserAction(gfxutils.actions.ja_bufferedimage_fill_rgba.class);
     registrator.registerUserAction(gfxutils.actions.ja_bufferedimage_get.class);
     registrator.registerUserAction(gfxutils.actions.ja_bufferedimage_hline.class);
     registrator.registerUserAction(gfxutils.actions.ja_bufferedimage_line.class);
